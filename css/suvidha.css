@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+#front {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 100px;
+}
+.logo {
+  width: 7rem;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+nav ul li a {
+  color: white;
+  position: relative;
+  padding: 5px 0;
+}
+nav ul li a:hover {
+  color: yellow;
+}
+nav ul li a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: yellow;
+  transition: 0.3s;
+  bottom: 0;
+}
+nav ul li a:hover:after {
+  width: 100%;
+}
+.btn {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 16px 40px;
+  border-radius: 500px;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.4s ease-in-out;
+  background-size: 152% 100%;
+  background: slateblue;
+  border: 2px solid slateblue;
+  
+}
+.btn:hover {
+  background: transparent;
+  border-color: yellow;
+  color:yellow;
+
+}
+h1 {
+    margin-left:950px;
+    margin-top: 50px;
+    font-size: 60px;
+    color: black;
+  }
+h2 {
+    margin-left: 1110px;
+  }
+div.number {
+  background-color:black;
+  width: 300px;
+  border: 0.3px solid black;
+  padding: 30px;
+  margin-left:1050px;
+  margin-top:30px;
+  opacity:85%;
+  padding-bottom:10px;
+  border-top-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  color:white;    
+}
+.section {
+    border: 0.5px outset green;
+    background-color: #3CB371;
+    opacity: 0.6;
+    text-align: left;
+    margin-top: absolute;
+}   
+body, html {
+  height: 100%;
+  margin: 0;
+}
+body {
+    margin: 0;
+}
+.bg {
+  background-image: url("../assets/farmer.jpg");
+  height: 100%; 
+   
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #596854;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  position: relative;
+}
+.topnav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #FFB600;
+  transition: 0.3s;
+  bottom: 0;
+}
+
+.topnav a:hover::after {
+  width: 100%;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #f1f1f1;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.main {
+  padding: 16px;
+  margin-bottom: 30px;
+}
+.footer {
+  border-radius: 5px;
+  outline-color: transparent;
+  outline-style: inset;
+ 
+  margin-top: 280px;
+  margin-right: 200px;
+}
+.new
+{
+text-decoration:none;
+color:white;}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  float:right;
+  margin-top:15px;
+  margin-right:255px;
+  cursor: pointer;
+
+}
+.button:hover
+{background:black;
+color:white;
+box-shadow: rgba(0, 0, 0, 0.6);
+
+}
+.link
+{
+text-decoration:none;
+color:white;
+}

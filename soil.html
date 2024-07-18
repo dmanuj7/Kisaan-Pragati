@@ -1,0 +1,242 @@
+<html>
+<head>
+<title>Soil</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral|Rubik">
+<link rel="stylesheet" href="css/soil.css">
+<link rel="website icon" type="png" href="assets/pngg.png">
+</head>
+<body>
+<section class="nav">
+  <nav>
+        <img src="assets/lgo.png" class="logo" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="buy.html">Buy</a></li>
+          <li><a href="#">Sell</a></li>
+          <li><a href="#">Training</a></li>
+          <li><a href="govt.html">Govt. Schemes</a></li>
+          <li><a href="soil.html">Soil Data</a></li>
+          <li><a href="suvidha.html">Kisaan Suvidha</a></li>
+        </ul>
+        <a href="login.html" class="btn">Sign up</a>
+  </nav>
+</section>
+<form>
+  <div class="forms">
+    <label for="inputState">State</label>
+    <select class="form-control" id="inputState" onchange="myFunction()">
+                        <option value="SelectState">Select State</option>
+                        <option value="Andra Pradesh">Andra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madya Pradesh">Madya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Orissa">Orissa</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthani">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttarakhand">Uttaranchal</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="West Bengal">West Bengal</option>
+                        <option disabled style="background-color:#aaa; color:#fff">UNION Territories</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                        <option value="Daman and Diu">Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Lakshadeep">Lakshadeep</option>
+                        <option value="Pondicherry">Pondicherry</option>
+                      </select>
+  </div>
+ <div class="dis">
+    <label for="inputDistrict">District</label>
+  
+    <select class="form-control" id="inputDistrict"> 
+        <option value="">-- select one -- </option>
+    </select>
+  
+  </div>
+</form>
+ <div class="stg" > 
+   
+   <h1 id="demo" > Crops to be grown</h1>
+    <h2 id="dis">
+   </h2>
+  </div>
+<script>
+function myFunction() {
+    var x = document.getElementById("inputState").value;
+    if(x == "Uttaranchal"){
+       document.getElementById("demo").innerHTML = "You selected: " + x;}
+       else if(x=="Uttar Pradesh"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+         document.getElementById("dis").innerHTML="Wheat , Rice ,Pulses , Potatoes";
+           var img = document.createElement("img");
+        img.src = "https://www.mapsofindia.com/maps/uttarpradesh/uttarpradesh-agriculture-map.jpg";
+        img.height = 150;
+        img.width = 200;
+  var class_name = "gif";
+           img.setAttribute("class", class_name);
+           document.getElementById("main").appendChild(img);
+           }
+       else if(x=="Andra Pradesh"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+     else if(x=="Arunachal Pradesh"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+      else if(x=="Assam"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           document.getElementById("dis").innerHTML="Wheat , Barley";
+           var img = document.createElement("img");
+        img.src = "soilassam.jpg";
+        img.height = 150;
+        img.width = 200;
+
+        var class_name = "gif";
+        img.setAttribute("class", class_name);
+
+        document.getElementById("main").appendChild(img);
+           }
+     else if(x=="Bihar"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+     else if(x=="Chhattisgarh"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+      else if(x=="Goa"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+     else if(x=="Gujarat"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="Haryana"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="Himachal Pradesh"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="Jammu and Kashmir"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+   document.getElementById("dis").innerHTML="Saffron ,Rice , Maize";
+           var img = document.createElement("img");
+        img.src = "https://www.mapsofindia.com/maps/jammuandkashmir/jammuandkashmir-agriculture-map.jpg";
+        img.height = 150;
+        img.width = 200;
+  var class_name = "gif";
+           img.setAttribute("class", class_name);
+           document.getElementById("main").appendChild(img);
+           }
+else if(x=="Jharkhand"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+  
+           }
+else if(x=="Karnataka"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="Kerala"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="Madya Pradesh"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="Maharashtra"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+  document.getElementById("dis").innerHTML="Rice ,Jowar , Pulses";
+           var img = document.createElement("img");
+        img.src = "https://www.mapsofindia.com/maps/maharashtra/maharashtra-agriculture-map.jpg";
+        img.height = 150;
+        img.width = 200;
+  var class_name = "gif";
+           img.setAttribute("class", class_name);
+           document.getElementById("main").appendChild(img);
+           }
+else if(x=="Manipur"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="Meghalaya"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="Mizoram"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="Nagaland"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="Orissa"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           document.getElementById("dis").innerHTML="Rice and Sugarcane";
+           var img = document.createElement("img");
+           img.src ="https://raw.githubusercontent.com/Shanvithegreat0/kisaanpragati.github.io/main/assets/orissa.jpg";
+           img.height = 150;
+           img.width = 200;
+           var class_name = "gif";
+           img.setAttribute("class", class_name);
+           document.getElementById("main").appendChild(img);
+           }
+else if(x=="Punjab"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="Rajasthan"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="Sikkim"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="Tamil Nadu"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="Telangana"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="Tripura"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="West Bengal"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="Andaman and Nicobar Islands"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="Dadar and Nagar Haveli"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="Delhi"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="Daman and Diu"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="Lakshadeep"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+else if(x=="Pondicherry"){
+           document.getElementById("demo").innerHTML = "You selected: " + x;
+           }
+
+}
+
+
+ 
+</script>
+ 
+  <script src="js/state.js"></script>
+  </body>
+</html>

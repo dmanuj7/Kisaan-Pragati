@@ -1,0 +1,110 @@
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="css/login.css">
+<link rel="website icon" type="png" href="assets/pngg.png">
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="no.css">
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js">
+  </script>
+  
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js">
+  </script>
+      
+  <script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyBxUfPkB9kq0CUyZW_jyUL_m2St9CFXCL8",
+    authDomain: "kisaansuvidha-2ac6f.firebaseapp.com",
+    databaseURL: "https://kisaansuvidha-2ac6f-default-rtdb.firebaseio.com",
+    projectId: "kisaansuvidha-2ac6f",
+    storageBucket: "kisaansuvidha-2ac6f.appspot.com",
+    messagingSenderId: "100049732802",
+    appId: "1:100049732802:web:0a7c248f1ce3cb5a49a75b",
+    measurementId: "G-LM542QTHSK"
+  };
+  firebase.initializeApp(firebaseConfig);
+  
+const auth = firebase.auth();
+  
+// Signup function
+function signUp() {
+  const name = document.getElementById("name");
+  var email = document.getElementById("email");
+  var password = document.getElementById("password");
+  
+  const promise = auth.createUserWithEmailAndPassword(
+    email.value,
+    password.value
+  );
+  promise.catch((e) => alert(e.message));
+  alert("SignUp Successfully");
+}
+  
+// SignIN function
+function signIn() {
+  var email = document.getElementById("email");
+  var password = document.getElementById("password");
+  const promise = auth.signInWithEmailAndPassword(
+            email.value, password.value);
+  promise.catch((e) => alert(e.message));
+  alert("Sign In successfully"+ email);
+}
+  
+// SignOut
+function signOut() {
+  auth.signOut();
+  alert("SignOut Successfully from System");
+}
+  
+// Active user to homepage
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    var email = user.email;
+    alert("Active user " + email);
+  } else {
+    alert("No Active user Found");
+  }
+});
+  </script>
+</head>
+<body>
+<div class="container right-panel-active">
+			<!-- Sign Up -->
+			<div class="container__form container--signup">
+				<form action="#" class="form" id="form1">
+					<h2 class="form__title">Sign Up</h2>
+					<input  id="name" type="text" placeholder="User" class="input" />
+					<input id="email" type="email" placeholder="Email" class="input" />
+					<input  id="password" type="password" placeholder="Password" class="input" />
+					<button id="signup" class="btn">Sign Up</button>
+				</form>
+			</div>
+  
+  <!-- Sign In -->
+      <div class="container__form container--signin">
+				<form action="#" class="form" id="form2">
+					<h2 class="form__title">Sign In</h2>
+					<input id="name" type="email" placeholder="Email" class="input" />
+					<input id="password" type="password" placeholder="Password" class="input" />
+					<a href="#" class="link">Forgot your password?</a>
+					<button class="btn">Sign In</button>
+				</form>
+			</div>
+
+			<!-- Overlay -->
+			<div class="container__overlay">
+				<div class="overlay">
+					<div class="overlay__panel overlay--left">
+						<button class="btn1" id="signIn">Sign In</button>
+					</div>
+					<div class="overlay__panel overlay--right">
+						<button class="btn" id="signUp">Sign Up</button>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+<script src="js/login.js"></script>
+</html>
